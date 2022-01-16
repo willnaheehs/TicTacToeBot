@@ -1,0 +1,122 @@
+#X will start(user), so true
+clicked = True
+
+#button clicked function
+def b_click(b):
+    global clicked
+    #b["text"] refers to text parameter of the button object
+    if b["text"] == " " and clicked == True:
+        b["text"] = "X"
+        clicked = False
+    elif b["text"] == " " and clicked == False:
+        b["text"] = "O"
+        clicked = True
+        computer_turn()
+    else:
+        messagebox.showerror("Tic Tac Toe", "This box has already been selected!\nPick another box")
+
+        #first move plays middle square else random
+            if (b1["text"] == "X" or b3["text"] == "X" or b7["text"] == "X" or b9["text"] == "X") and turn == 1:
+                board[4].configure(text = "O")
+                board[4]["state"] = tk.DISABLED
+                to_play = TRUE
+
+   #rows
+        if (b1["text"] == "X" and b2["text"] == "X" and b3["text"] == " "):
+            board[6].configure(text = "O")
+            b3["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b3["text"] == "X" and b2["text"] == "X" and b1["text"] == " "):
+            board[8].configure(text = "O")
+            b1["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b1["text"] == "X" and b3["text"] == "X" and b2["text"] == " "):
+            board[6].configure(text = "O")
+            b3["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b4["text"] == "X" and b5["text"] == "X" and b6["text"] == " "):
+            board[3].configure(text = "O")
+            b6["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b6["text"] == "X" and b5["text"] == "X" and b4["text"] == " "):
+            board[5].configure(text = "O")
+            b4["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b4["text"] == "X" and b6["text"] == "X" and b5["text"] == " "):
+            board[4].configure(text = "O")
+            b5["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b7["text"] == "X" and b8["text"] == "X" and b9["text"] == " "):
+            board[0].configure(text = "O")
+            b9["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b9["text"] == "X" and b8["text"] == "X" and b7["text"] == " "):
+            board[2].configure(text = "O")
+            b7["state"] = tk.DISABLED
+            to_play = TRUE
+        if (b7["text"] == "X" and b9["text"] == "X" and b8["text"] == " "):
+            board[1].configure(text = "O")
+            b8["state"] = tk.DISABLED
+            to_play = TRUE
+        #cols
+            if (b1["text"] == "X" and b4["text"] == "X" and b7["text"] == " "):
+                board[2].configure(text = "O")
+                b7["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b7["text"] == "X" and b4["text"] == "X" and b1["text"] == " "):
+                board[8].configure(text = "O")
+                b1["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b1["text"] == "X" and b7["text"] == "X" and b4["text"] == " "):
+                board[5].configure(text = "O")
+                b4["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b2["text"] == "X" and b5["text"] == "X" and b8["text"] == " "):
+                board[1].configure(text = "O")
+                b8["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b8["text"] == "X" and b5["text"] == "X" and b2["text"] == " "):
+                board[7].configure(text = "O")
+                b2["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b2["text"] == "X" and b8["text"] == "X" and b5["text"] == " "):
+                board[4].configure(text = "O")
+                b5["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b3["text"] == "X" and b6["text"] == "X" and b9["text"] == " "):
+                board[0].configure(text = "O")
+                b9["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b9["text"] == "X" and b6["text"] == "X" and b3["text"] == " "):
+                board[6].configure(text = "O")
+                b3["state"] = tk.DISABLED
+                to_play = TRUE
+            if (b3["text"] == "X" and b9["text"] == "X" and b6["text"] == " "):
+                board[3].configure(text = "O")
+                b6["state"] = tk.DISABLED
+                to_play = TRUE
+            #diagonals
+                if (b1["text"] == "X" and b5["text"] == "X" and b9["text"] == " "):
+                    board[0].configure(text = "O")
+                    b9["state"] = tk.DISABLED 
+                    to_play = TRUE
+                if (b9["text"] == "X" and b5["text"] == "X" and b1["text"] == " "):
+                    board[8].configure(text = "O")
+                    b1["state"] = tk.DISABLED
+                    to_play = TRUE
+                if (b1["text"] == "X" and b9["text"] == "X" and b5["text"] == " "):
+                    board[4].configure(text = "O")
+                    b5["state"] = tk.DISABLED
+                    to_play = TRUE
+                if (b3["text"] == "X" and b5["text"] == "X" and b7["text"] == " "):
+                    board[2].configure(text = "O")
+                    b7["state"] = tk.DISABLED
+                    to_play = TRUE
+                if (b7["text"] == "X" and b5["text"] == "X" and b3["text"] == " "):
+                    board[6].configure(text = "O")
+                    b3["state"] = tk.DISABLED
+                    to_play = TRUE
+                if (b3["text"] == "X" and b7["text"] == "X" and b5["text"] == " "):
+                    board[4].configure(text = "O")
+                    b5["state"] = tk.DISABLED
+                    to_play = TRUE
