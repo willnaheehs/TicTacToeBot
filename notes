@@ -1,3 +1,19 @@
+
+def checkForWin(notAvailableSpots):
+takenBoxes = notAvailableSpots
+for num in takenBoxes:
+    counter = 0
+    if num != " ":
+        if counter%2 == 0:
+            takenBoxes[num] = 1
+        else: 
+            takenBoxes[num]=2
+    counter += 1
+return takenBoxes
+
+
+
+
 #X will start(user), so true
 clicked = True
 
